@@ -46,6 +46,17 @@ $(window).on('load', function(){
   window.loaded = 1;
 });
 
+  window.$fvIdentity = {
+    id: '213123213',          // Required - anything unique in your organisation
+    name: 'Paul Spencer',                // Required - visible in Fullview dashboard
+    email: 'paul.spencer@snyk.io',          // Optional - visible in Fullview dashboard
+    disableReplaysForUser: false,       // Optional - disable replays for specific users
+    env: 'stage',                       // Optional - for segmentation and environment-based settings
+    roles: ['owner', 'workspaceAdmin'], // Optional - for segmentation and role-based settings
+    [key: string]: 'customData',        // Optional - use this to add multiple custom fields
+  };
+</script>
+
 //On DOM ready
 $(document).ready(function() { "use strict";
   var $body = $('body');
